@@ -1,0 +1,122 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #cfd1e1 ;
+    overflow: hidden;
+}
+.form{
+    width: 280px;
+    height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+  background-image: linear-gradient(#cfd1e1,#9a9baa);
+  box-shadow: inset 15px 0px rgb(239, 239, 239),
+  inset 0px 3px rgb(255, 255, 255),
+  inset -15px 0px rgba(147, 147, 147, 0.689),
+  4px 4px 5px rgba(8, 8, 8, 0.905),
+   4px 4px 10px rgba(66, 66, 66, 0.208),4px 4px 25px rgba(66, 66, 66, 0.208)
+   ,10px 10px 25px rgba(66, 66, 66, 0.509);
+}
+.form::before{
+    position: absolute;
+    content: "";
+    width: 200%;
+    height: 100%;
+    transform-origin: left;
+   left: 100%;
+  transform: skewY(45deg);
+    background-color: rgba(167, 167, 167, 0.37);
+    
+}
+
+.form::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    transform-origin: top;
+   bottom: -100%;
+  transform: skewX(45deg);
+    background-color: rgba(167, 167, 167, 0.566);
+    
+}
+.form_head{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.form_head .icon{
+   padding: 0.7em;
+   border-radius: 50%;
+    background-color: rgb(44, 44, 44);
+    color: white;
+}
+.form_head h3{
+    font-size: 2rem;
+    font-weight: 200;
+
+}
+.box_inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+.box_inputs .box_input{
+    position: relative;
+    border-bottom: 1px solid rgb(48, 48, 48);
+}
+.box_input span{
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    transform: translateX(20%);
+    transition: 0.3s;
+    padding: 0.2em;
+}
+.box_input input{
+    border: none;
+    outline: none;
+    height: 30px;
+    background-color: transparent;
+    position: relative;
+ z-index: 2;
+}
+.box_input  input:focus ~ span,
+.box_input  input:valid ~ span{
+    transform: translateY(-100%);
+    background-color: rgb(48, 48, 48);
+    color: cfd1e1;
+    font-size: 0.8em;
+
+}
+.box_inputs_content{
+    display: flex;
+ justify-content: space-between;
+}
+.box_inputs_content a{
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    font-size: 0.8em;
+    cursor: pointer;
+    text-decoration: none;
+    color: rgb(48, 48, 48);
+}  
+.box_inputs button{
+    background-color: rgb(48, 48, 48);
+    padding: 0.5em;
+    border: none;
+    outline: none;
+    color: white;
+}
